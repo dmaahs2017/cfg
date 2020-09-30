@@ -1,0 +1,22 @@
+#!/bin/bash
+# download oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# download powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# set powerlevel10k to the zsh_theme
+sed -e s-^ZSH_THEME=.*-ZSH_THEME=\"Powerlevel10k\"-g ~/.zshrc > ~/.zshrc
+
+# append aliases to zshrc
+aliases="gs:git status \
+	gswm:git-switch-branch.sh \
+	grss:git restore --staged \
+	grs:git restore \
+	gmm:git merge master \
+	gbc:git branch | cat \
+	gbdm:git-branch-delete-menu.sh \
+	gspu:git stash push \
+	gspo:git stash pop \
+	py:python3 \
+	vimt:vim temp && rm temp 2> /dev/null"
+

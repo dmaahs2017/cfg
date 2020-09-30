@@ -1,0 +1,8 @@
+#!/bin/bash
+FLAGS=$1
+PATTERN=$2
+
+match=$(rg "$FLAGS" "$PATTERN" | awk -F: '{print $1}' | uniq | sort | fzf)
+
+echo -n $match | pbcopy
+echo $match

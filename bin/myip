@@ -1,0 +1,2 @@
+curl -s http://whatismyip.akamai.com/ | awk '{print "External:\t"$0}'
+ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/' | awk '{print "Internal:\t"$0}'

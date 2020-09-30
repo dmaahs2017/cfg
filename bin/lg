@@ -1,0 +1,7 @@
+#!/bin/bash
+# TODO: instead of counting by lines, count by commits.
+defaultCnt=50
+count="$1"
+
+[[ "$count" == "" ]] && count="$defaultCnt"
+git log | head "-n ""$count" | vim -

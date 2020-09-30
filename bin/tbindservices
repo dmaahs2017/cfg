@@ -1,0 +1,12 @@
+#!/bin/bash
+BINDIR="$HOME/dev/bind"
+PTADIR="$BINDIR/bind-performance-tests"
+WEBDIR="$BINDIR/web-apps"
+SERVICES="Services"
+NG_SERVE="gateway=dev ng serve --port"
+
+tmux kill-session -t "$SERVICES" 2> /dev/null
+
+tmux new-session -d -c "$WEBDIR" -s "$SERVICES" -n "serve-dev" "gateway=dev ng serve --port 4200 member-app"
+tmux new-window -c "$WEBDIR" -n "serve-hermes" "gateway=hermes ng serve --port 4300 member-app"   
+tmux new-window -c "$WEBDIR" -n "serve-prememberStage" "gateway=stage ng serve --port 4400 member-app"
