@@ -12,6 +12,17 @@ alias pfmt="./gradlew scalafmtAll"
 
 # cfg bare repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cs="config status"
+alias ca="config add"
+alias cs="config status"
+alias crss="config restore --staged"
+alias cmm="config merge master"
+alias cbc="config branch | cat"
+alias cbdm="config-branch-delete-menu.sh"
+alias cspu="config stash push"
+alias cspo="config stash pop"
+alias cpull="config pull"
+
 # git aliases
 alias gs="git status"
 alias grss="git restore --staged"
