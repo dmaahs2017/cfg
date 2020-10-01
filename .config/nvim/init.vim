@@ -9,5 +9,3 @@ try
 source ~/.vim_runtime/my_configs.vim
 catch
 endtry
-
-let @w = 'F(awwwwwwwbli€ýallikkw'
