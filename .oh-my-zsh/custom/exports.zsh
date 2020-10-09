@@ -2,6 +2,8 @@
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/dotfiles/scripts"
 export PATH="$PATH:$HOME/Casks"
+export PATH="$PATH:$HOME/Library/Python/3.8/bin"
+export PATH="$PATH:/usr/local/lib/ruby/gems/2.7.0/bin" # Ruby path for ruby gem installs
 
 # Other Exports
 export FZF_BASE="/usr/local/bin/fzf"
