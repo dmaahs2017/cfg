@@ -10,6 +10,7 @@ export FZF_BASE="/usr/local/bin/fzf"
 export EDITOR='vim'
 export TERM="xterm-256color"
 export MD_NOTEBOOKS_DIR="$HOME/dev/md-notebooks"
+export ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # brew
 export HOMEBREW_CASK_OPTS='--appdir=~/Casks'
