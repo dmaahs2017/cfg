@@ -4,13 +4,14 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'preservim/nerdcommenter'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'mattn/vim-lsp-settings'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -30,6 +31,10 @@ nnoremap - <C-W>-
 nnoremap < <C-W><
 nnoremap > <C-W>>
 :nmap cp :let @+ = expand("%")<cr>
+
+highlight CocFloating ctermbg=black
+highlight CocErrorFloat ctermfg=red
+highlight CocInfoFloat ctermfg=yellow
 
 let t:is_transparent = 0                                                                        
 function! Toggle_transparent_background()                                                       
