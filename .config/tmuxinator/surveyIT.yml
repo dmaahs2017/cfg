@@ -50,7 +50,7 @@ windows:
       root: ~/dev/surveyIT/server
       panes:
         - vim
-        - docker-compose up -d && yarn dev2
+        - docker-compose start && yarn dev2
   - web:
       layout: main-horizontal
       root: ~/dev/surveyIT/web

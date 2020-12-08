@@ -12,6 +12,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -31,6 +32,7 @@ nnoremap - <C-W>-
 nnoremap < <C-W><
 nnoremap > <C-W>>
 :nmap cp :let @+ = expand("%")<cr>
+set foldmethod=marker
 
 highlight CocFloating ctermbg=black
 highlight CocErrorFloat ctermfg=red
