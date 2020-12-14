@@ -1,0 +1,5 @@
+#!/bin/bash
+xsetwacom set "HID 256c:006d Pad pad" button 1 key ESC
+xsetwacom set "HID 256c:006d Pad pad" button 2 key CTRL Z
+xsetwacom set "HID 256c:006d Pad pad" button 8 key F
+xsetwacom set "HID 256c:006d Pad pad" button 9 key D
