@@ -13,6 +13,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'mattn/vim-gist'
+Plug 'mattn/webapi-vim'
 call plug#end()
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -33,6 +35,7 @@ nnoremap < <C-W><
 nnoremap > <C-W>>
 :nmap cp :let @+ = expand("%")<cr>
 set foldmethod=marker
+let g:AutoPairsShortcutToggle = ''
 
 highlight CocFloating ctermbg=black
 highlight CocErrorFloat ctermfg=red
@@ -49,3 +52,5 @@ function! Toggle_transparent_background()
   endif                                                                                         
 endfunction                                                                                     
 nnoremap <C-x><C-t> :call Toggle_transparent_background()<CR> 
+
+"set encoding=utf-8

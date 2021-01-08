@@ -34,6 +34,7 @@ alias gspo="git stash pop"
 alias gpull="git pull"
 # other aliases
 alias py="python3"
+alias vim="nvim"
 alias vimt="vim temp && rm temp 2> /dev/null"
 alias clean="./gradlew clean"
 alias mux="tmuxinator"
