@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cargo test && cargo test -- --ignored && echo "All Tests Passed" || echo "Some Tests Failed"
