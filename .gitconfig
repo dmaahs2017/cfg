@@ -1,0 +1,28 @@
+[core]
+    pager = delta
+[delta]
+    side-by-side = true
+[user]
+	name = Dalton Maahs
+	email = dalton.maahs@yourbind.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	dt = difftool
+	move-staged = "!bash -c \"git stash-staged;git commit -m \"temp\"; git stash; git reset --hard HEAD^; git stash pop\""
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[github]
+	user = dmaahs2017
