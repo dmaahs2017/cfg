@@ -1,8 +1,0 @@
-#!/bin/bash
-# this script outputs the changed files from the fork root of the branch
-# cff stands for 'changed from fork'
-
-script="aws/bin/execute_build.py"
-modified_dirs_file="modified_directories.txt"
-echo "Changed files from fork root:"
-python3 "$script" --verbose > /dev/null && cat "$modified_dirs_file" && rm "$modified_dirs_file"

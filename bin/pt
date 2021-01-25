@@ -1,7 +1,0 @@
-#!/bin/bash
-scn="$3"
-portal="$2"
-env="$1"
-[[ "$scn" == "" ]] && scn="TestDevelopmentScenario"
-cmd="./gradlew -Denv=$env gatlingRun-scenarios.$portal.$scn"
-$cmd

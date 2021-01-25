@@ -1,1 +1,0 @@
-ng build --aot && npm run test:all && npm run format:fix && git diff && git status || echo "Failed"

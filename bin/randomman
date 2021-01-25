@@ -1,2 +1,0 @@
-#!/bin/bash
-find /usr/share/man/man1 -type f | shuf | head -n 1 | awk -F '/' '{print $6}' | sed 's/.gz//g' | xargs man
