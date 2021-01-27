@@ -1,0 +1,3 @@
+rofi.theme: ~/.config/rofi/themes/dt-center-nord.rasi
+rofi.width:30
+rofi.lines=2
