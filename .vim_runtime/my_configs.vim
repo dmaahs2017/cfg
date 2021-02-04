@@ -15,7 +15,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mattn/vim-gist'
 Plug 'mattn/webapi-vim'
+Plug 'davidpdrsn/vim-notable'
 call plug#end()
+
+source ~/.vim_runtime/coc_configs.vim
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set autoread
@@ -36,6 +39,7 @@ nnoremap > <C-W>>
 :nmap cp :let @+ = expand("%")<cr>
 set foldmethod=marker
 let g:AutoPairsShortcutToggle = ''
+noremap <leader>sb :call notable#open_notes_file()<cr>
 
 highlight CocFloating ctermbg=black
 highlight CocErrorFloat ctermfg=red
