@@ -5,6 +5,9 @@ export PATH="$PATH:$HOME/Casks"
 export PATH="$PATH:$HOME/Library/Python/3.8/bin"
 export PATH="$PATH:/usr/local/lib/ruby/gems/2.7.0/bin" # Ruby path for ruby gem installs
 
+# fpath additions for custom zsh completions
+fpath+=$ZSH/custom/completions
+
 # nvm brew caveat
 export NVM_DIR="$HOME/.nvm" 
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
