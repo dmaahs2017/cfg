@@ -16,6 +16,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mattn/vim-gist'
 Plug 'mattn/webapi-vim'
 Plug 'davidpdrsn/vim-notable'
+Plug 'mattn/emmet-vim'
+"Plug 'turbio/bracey.vim'
 call plug#end()
 
 source ~/.vim_runtime/coc_configs.vim
@@ -56,5 +58,9 @@ function! Toggle_transparent_background()
   endif                                                                                         
 endfunction                                                                                     
 nnoremap <C-x><C-t> :call Toggle_transparent_background()<CR> 
+
+" Emmet configs
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 "set encoding=utf-8
