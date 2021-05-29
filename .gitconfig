@@ -3,8 +3,8 @@
 [delta]
     side-by-side = true
 [user]
-	name = Dalton Maahs
-	email = dalton.maahs@yourbind.com
+	name = dalton
+	email = maahs2017@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -20,8 +20,7 @@
 	dt = difftool
 	move-staged = "!bash -c \"git stash-staged;git commit -m \"temp\"; git stash; git reset --hard HEAD^; git stash pop\""
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+	tool = nvimdiff
 [mergetool]
 	prompt = false
 [github]

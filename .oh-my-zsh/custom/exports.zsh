@@ -5,7 +5,7 @@ export PATH="$PATH:$HOME/Casks"
 
 # Other Exports
 export FZF_BASE="/usr/local/bin/fzf"
-export EDITOR='vim'
+export EDITOR='nvim'
 export TERM="alacritty"
 export MD_NOTEBOOKS_DIR="$HOME/dev/md-notebooks"
 
