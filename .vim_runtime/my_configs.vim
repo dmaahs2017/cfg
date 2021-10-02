@@ -11,6 +11,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mattn/vim-gist'
 Plug 'mattn/webapi-vim'
+
+" flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+
 call plug#end()
 
 "=================NERDTree Configs==========================
