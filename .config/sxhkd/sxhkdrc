@@ -33,7 +33,7 @@ super + {_,shift + }z
 	bspc node -{c,k}
 
 # quit/restart bspwm
-super + alt + q,
+super + alt + q
 	bspc quit
 
 # set the window state
