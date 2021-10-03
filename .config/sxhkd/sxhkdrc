@@ -40,6 +40,10 @@ super + alt + q
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+super + comma; m
+    bspc node -g marked
+super + comma; s
+    bspc node -g sticky
 # set the node flags
 super + {_,shift +}m
 	bspc node -g {marked,sticky}
@@ -47,7 +51,7 @@ super + {_,shift +}m
 # send the newest marked node to the newest preselected node
 # swap with marked
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+	bsp-layout cycle --layout tall,wide,rgrid,even
 
 
 # focus/move the prev window in the given desktop

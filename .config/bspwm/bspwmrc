@@ -3,7 +3,7 @@ bspc rule -r "*"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 Browsers Dev Discord Games1 Games2
+bspc monitor -d 1 Browsers Dev Discord Zoom Games1 Games2
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -18,6 +18,8 @@ bspc config gapless_monocle      true
 # Default Rules
 bspc rule -a Screenkey manage=off
 
+# Zoom
+bspc rule -a zoom desktop='Zoom' state=floating
 # Discord
 bspc rule -a discord desktop='Discord'
 ### Steam and Steam Games
