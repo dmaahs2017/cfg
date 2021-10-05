@@ -24,6 +24,8 @@ super + shift + alt + q
 
 # screenshot
 ctrl + Print
+    flameshot full -c && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+shift + Print
     flameshot full -p ~/Pictures && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 ctrl + shift + Print
     flameshot gui &&
