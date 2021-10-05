@@ -14,9 +14,21 @@ super + Return
 super + p
     pgrep polybar && killall -q polybar || polybar bspwm &
 
-# program launcher
+# program lakncher
 super + @space
 	dmenu_run
+
+# power off
+super + shift + alt + q
+    shutdown now
+
+# screenshot
+ctrl + Print
+    flameshot full -p ~/Pictures && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+ctrl + shift + Print
+    flameshot gui &&
+
+
 
 
 
@@ -44,6 +56,7 @@ super + comma; m
     bspc node -g marked
 super + comma; s
     bspc node -g sticky
+
 # set the node flags
 super + {_,shift +}m
 	bspc node -g {marked,sticky}
@@ -67,7 +80,7 @@ super + {k,j}
     bspc desktop -f {prev,next}
 
 # move to next/prev desktop
-super + shift + {h,l}
+super + shift + {k,j}
     bspc node -d {prev,next} --follow
 
 # focus or send to the given desktop
