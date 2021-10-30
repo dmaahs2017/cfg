@@ -10,9 +10,13 @@ super + comma; r
 super + Return
 	alacritty
 
+# thunar
+super + apostrophe
+    thunar
+
 # toggle polybar
 super + p
-    pgrep polybar && killall -q polybar || polybar bspwm &
+    pgrep polybar && killall -q polybar || $HOME/.config/polybar/launch.sh
 
 # program lakncher
 super + @space

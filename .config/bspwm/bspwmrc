@@ -5,10 +5,11 @@ bspc rule -r "*"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 Browsers Dev Discord Zoom Games1 Games2
+bspc monitor -d 1 Browsers Dev Discord Zoom Steam Games
 
 bspc config border_width         2
 bspc config window_gap          12
+bspc config bottom_padding 30
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -19,17 +20,26 @@ bspc config gapless_monocle      true
 ### ------------------------ ###
 # Default Rules
 bspc rule -a Screenkey manage=off
+bspc rule -a Polydock manage=off
 
 # Zoom
 bspc rule -a zoom desktop='Zoom' state=floating
 # Discord
 bspc rule -a discord desktop='Discord'
 ### Steam and Steam Games
-bspc rule -a Steam desktop='Games1' follow=on
+bspc rule -a Steam desktop='Steam' follow=on
 # Timberborn
-bspc rule -a steam_app_1062090 desktop='Games2' state=fullscreen follow=on
+bspc rule -a steam_app_1062090 desktop='Games' state=fullscreen follow=on
 # Bomber Crew
-bspc rule -a BomberCrew.x86_64 desktop='Games2' state=fullscreen follow=on
+bspc rule -a BomberCrew.x86_64 desktop='Games' state=fullscreen follow=on
+# Paavu Audio Controller
+bspc rule -a Pavucontrol state=floating
+# thunar
+bspc rule -a "Thunar" state=floating
+# gthumb
+bspc rule -a "Gthumb" state=floating
+# evnince
+bspc rule -a "Evince" state=floating
 
 # Browsers
 bspc rule -a "Brave-browser" desktop='Browsers'
@@ -41,12 +51,22 @@ bspc rule -a "LibreWolf" desktop='Browsers'
 ### ------------------------ ###
 
 # Launch Polybar
-killall -q polybar
-polybar bspwm &
+$HOME/.config/polybar/launch.sh
+
+# add spotify listener
+killall -q spotify-listener
+spotify-listener &
 
 # add walpaper
 feh --bg-fill ~/Pictures/FirekeeperFull.jpg
 
 # add compositor
 killall -q picom
-picom
+picom &
+
+# add notification manager
+killall -q dunst
+dunst &
+
+killall -q polydock
+polydock &
