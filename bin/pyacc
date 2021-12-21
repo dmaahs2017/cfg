@@ -1,0 +1,10 @@
+#!/bin/env python3
+
+import sys
+
+x = 0
+for line in sys.stdin:
+    words = line.split()
+    for word in words:
+        x += int(word)
+print(x)

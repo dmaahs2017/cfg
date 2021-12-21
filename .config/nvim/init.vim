@@ -1,11 +1,13 @@
-set runtimepath+=~/.vim_runtime
+" Set Vim Runtime Directory. (Autoload Vim Plug)
+set nocompatible
+filetype off
+set rtp+=~/.config/nvim/runtime
 
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/keybinds.vim
+source ~/.config/nvim/editor.vim
+source ~/.config/nvim/colors.vim
+" source ~/.config/nvim/lsp.vim
 
-try
-source ~/.vim_runtime/my_configs.vim
-catch
-endtry
+
+"set encoding=utf-8

@@ -5,7 +5,7 @@ bspc rule -r "*"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 Browsers Dev Discord Zoom Steam Games
+bspc monitor -d 1 2 3 Browsers Dev Discord Zoom Steam Games
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -41,6 +41,9 @@ bspc rule -a "Gthumb" state=floating
 # evnince
 bspc rule -a "Evince" state=floating
 
+# terminal
+bspc rule -a "Alacritty" desktop='Dev' follow=on
+
 # Browsers
 bspc rule -a "Brave-browser" desktop='Browsers'
 bspc rule -a Chromium desktop='Browsers'
@@ -51,6 +54,7 @@ bspc rule -a "LibreWolf" desktop='Browsers'
 ### ------------------------ ###
 
 # Launch Polybar
+killall -q polybar
 $HOME/.config/polybar/launch.sh
 
 # add spotify listener
@@ -70,3 +74,6 @@ dunst &
 
 killall -q polydock
 polydock &
+
+killall nm-applet
+nm-applet --indicator

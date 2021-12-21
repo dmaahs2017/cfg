@@ -412,9 +412,10 @@ background_opacity: 0.8
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
-#  program: /bin/bash
+#  program: /bin/tmuxinator
 #  args:
-#    - --login
+#    - home
+
 
 # Startup directory
 #
