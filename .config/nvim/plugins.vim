@@ -5,7 +5,8 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'preservim/nerdcommenter'
-Plug 'tmsvg/pear-tree'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'tmsvg/pear-tree'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'

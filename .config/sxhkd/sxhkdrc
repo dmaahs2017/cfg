@@ -6,6 +6,10 @@ super + comma; r
 	pkill -USR1 -x sxhkd; \
     bspc wm -r
 
+# lightdm switch users
+super + q
+    dm-tool switch-to-greeter
+
 # terminal emulator
 super + Return
 	alacritty
@@ -18,13 +22,18 @@ super + apostrophe
 super + p
     pgrep polybar && killall -q polybar || $HOME/.config/polybar/launch.sh
 
-# program lakncher
+#program launcher
 super + @space
 	dmenu_run
 
 # power off
 super + shift + alt + q
     shutdown now
+
+# suspend/hibernate/reboot
+super + comma; super + {s,h,r}
+    systemctl {suspend,hibernate,reboot}
+    
 
 # screenshot
 ctrl + Print
@@ -41,6 +50,18 @@ ctrl + shift + Print
 ### ----------------- ###
 ### WM Hotkeys     
 ### ----------------- ###
+
+# rotate
+super + {_,shift +}v
+    bspc node first_ancestor --rotate {90,270}
+
+# equalize
+super + b
+    bspc node @/ -E
+
+# hide current node
+super + m
+    bspc node focused --flag hidden
 
 # toggle desktop layout
 super + {_,shift + }c

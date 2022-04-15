@@ -5,11 +5,12 @@ bspc rule -r "*"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 Browsers Dev Discord Zoom Steam Games
+bspc monitor -d 1 Web Dev Confs Media Steam Games 8 9
 
 bspc config border_width         2
 bspc config window_gap          12
 bspc config bottom_padding 30
+
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -22,10 +23,10 @@ bspc config gapless_monocle      true
 bspc rule -a Screenkey manage=off
 bspc rule -a Polydock manage=off
 
-# Zoom
-bspc rule -a zoom desktop='Zoom' state=floating
-# Discord
-bspc rule -a discord desktop='Discord'
+# Media
+# Confs
+bspc rule -a discord desktop='Confs'
+bspc rule -a zoom desktop='Confs'
 ### Steam and Steam Games
 bspc rule -a Steam desktop='Steam' follow=on
 # Timberborn
@@ -34,6 +35,9 @@ bspc rule -a steam_app_1062090 desktop='Games' state=fullscreen follow=on
 bspc rule -a BomberCrew.x86_64 desktop='Games' state=fullscreen follow=on
 # Paavu Audio Controller
 bspc rule -a Pavucontrol state=floating
+# Minecraft
+bspc rule -a "Minecraft* 1.18.1" desktop='Games' follow=off
+bspc rule -a MultiMC desktop='Steam'
 # thunar
 bspc rule -a "Thunar" state=floating
 # gthumb
@@ -41,13 +45,10 @@ bspc rule -a "Gthumb" state=floating
 # evnince
 bspc rule -a "Evince" state=floating
 
-# terminal
-bspc rule -a "Alacritty" desktop='Dev' follow=on
-
-# Browsers
-bspc rule -a "Brave-browser" desktop='Browsers'
-bspc rule -a Chromium desktop='Browsers'
-bspc rule -a "LibreWolf" desktop='Browsers'
+# Web
+bspc rule -a "Brave-browser" desktop='Web'
+bspc rule -a Chromium desktop='Web'
+bspc rule -a "LibreWolf" desktop='Web'
 
 ### ------------------------ ###
 ###        End Rules         ###
@@ -62,8 +63,7 @@ killall -q spotify-listener
 spotify-listener &
 
 # add walpaper
-feh --bg-fill ~/Pictures/FirekeeperFull.jpg
-
+feh --bg-fill ~/Pictures/Firekeeper.png
 # add compositor
 killall -q picom
 picom &
@@ -77,3 +77,7 @@ polydock &
 
 killall nm-applet
 nm-applet --indicator
+
+# add usb manager
+killall udiskie
+udiskie -o rw -s &
