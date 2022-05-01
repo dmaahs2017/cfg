@@ -84,3 +84,5 @@ udiskie -o rw -s &
 
 killall -q cairo-dock
 cairo-dock &
+
+redshift -l 45.30584243018516:-93.6308781962354
