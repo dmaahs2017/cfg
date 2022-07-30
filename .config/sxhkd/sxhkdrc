@@ -43,6 +43,12 @@ shift + Print
 ctrl + shift + Print
     flameshot gui &&
 
+# redshift
+super + d
+    redshift -x
+super + n
+    redshift -P -O 4500
+
 
 
 

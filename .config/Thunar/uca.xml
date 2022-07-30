@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>Alacritty</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1640134564938509-1</unique-id>
+	<command>alacritty --working-directory %f</command>
+	<description>Run alacritty in this directory</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name></name>
+	<unique-id>1651785608356726-1</unique-id>
+	<command></command>
+	<description></description>
+	<patterns>*</patterns>
+</action>
+</actions>

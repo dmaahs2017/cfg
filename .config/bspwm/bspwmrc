@@ -39,7 +39,7 @@ bspc rule -a Pavucontrol state=floating
 bspc rule -a "Minecraft* 1.18.1" desktop='Games' follow=off
 bspc rule -a MultiMC desktop='Steam'
 # thunar
-bspc rule -a "Thunar" state=floating
+bspc rule -a "Thunar"
 # gthumb
 bspc rule -a "Gthumb" state=floating
 # evnince
@@ -61,28 +61,30 @@ $HOME/.config/polybar/launch.sh
 # add spotify listener
 killall -q spotify-listener
 spotify-listener &
+#restart-app.sh spotify-listener 
 
 # add walpaper
-feh --bg-fill ~/Pictures/Firekeeper.png
+feh --bg-fill ~/Pictures/Firekeeper.png &
+
 # add compositor
 killall -q picom
 picom &
+#restart-app.sh picom 
 
 # add notification manager
 killall -q dunst
 dunst &
+#restart-app.sh dunst 
 
-killall -q polydock
-polydock &
-
-killall nm-applet
+killall -q nm-applet
 nm-applet --indicator
+#restart-app.sh nm-applet "--indicator" 
 
 # add usb manager
-killall udiskie
-udiskie -o rw -s &
+killall -q udiskie
+udiskie -s &
+#restart-app.sh udiskie "-o rw -s" 
 
 killall -q cairo-dock
 cairo-dock &
-
-redshift -l 45.30584243018516:-93.6308781962354
+#restart-app.sh cairo-dock 
