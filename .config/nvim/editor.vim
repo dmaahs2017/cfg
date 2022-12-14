@@ -1,5 +1,5 @@
 " global clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " line numbers
 set number

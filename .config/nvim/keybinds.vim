@@ -48,3 +48,5 @@ nnoremap <leader>cp :let @+ = expand("%")<cr>
 
 " Other
 nnoremap <leader>r :checktime <CR>
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
